@@ -1,0 +1,26 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+@font-face {
+  font-family: 'Aleo', serif;
+  src: url('/src/assets/fonts/Aleo/Aleo-Regular.ttf') format("truetype");
+}
+
+@font-face {
+  font-family: 'Inter', sans-serif;
+  src: url('/src/assets/fonts/Inter/Inter.ttf') format("truetype");
+}
+
+:root {
+  --primary: #000;
+  --bg: #FFF;
+}

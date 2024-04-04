@@ -2,7 +2,7 @@
 
 body {
   font-family: 'Inter', sans-serif;
-  overflow: hidden;
+  overflow-x: hidden;
   user-select: none;
   -webkit-user-select: none;
   background-color: var(--page-bg);
@@ -38,11 +38,13 @@ header {
 
 .logo__transparent {
   width: 25px;
-  height: 25px;
+  height: 30px;
   background-color: var(--page-bg);
   position: absolute;
-  top: 52%;
+  top: 42%;
   right: 50%;
+  display: flex;
+  align-items: end;
 }
 
 .logo__text {
@@ -103,17 +105,6 @@ header {
 .icon-moon {
   fill: var(--icon-moon);
 }
-
-
-
-
-
-
-
-
-
-
-
 
 @media screen and (min-width: 1024px) {
   .container {

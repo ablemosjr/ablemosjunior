@@ -1,2 +1,122 @@
 @import url('globalstyles.css');
 
+body {
+  font-family: 'Inter', sans-serif;
+  overflow: hidden;
+  user-select: none;
+  -webkit-user-select: none;
+  background-color: var(--page-bg);
+}
+
+.container {
+  padding: 20px 20px;
+}
+
+.h-100 {
+  height: 100dvh;
+}
+
+.max-w-1200 {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  width: 40px;
+  height: 40px;
+  background-color: transparent;
+  border: 2px solid var(--primary-text);
+  position: relative;
+
+}
+
+.logo__transparent {
+  width: 25px;
+  height: 25px;
+  background-color: var(--page-bg);
+  position: absolute;
+  top: 52%;
+  right: 50%;
+}
+
+.logo__text {
+  font-family: 'Aleo', serif;
+  font-size: 21px;
+  color: var(--primary-text);
+}
+
+.links {
+  display: flex;
+  gap: 20px;
+}
+
+.links a {
+  color: var(--secondary-text);
+  font-weight: 300;
+  transition: .2s ease-in-out;
+}
+
+.links a:hover {
+  color: var(--primary-text);
+  font-weight: 400;
+}
+
+.theme-switcher {
+  background-color: var(--switch-bg);
+  border-radius: 1px;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  cursor: pointer;
+  padding: .25rem;
+  position: relative;
+}
+
+.theme-switcher::before {
+  content: '';
+  position: absolute;
+  width: 1.56rem;
+  height: 1.56rem;
+  background-color: var(--switch-circle-bg);
+  border-radius: 1px;
+  z-index: 0;
+  left: 0;
+  transform: translateX(var(--switch-circle-pos));
+  transition: var(--theme-transition);
+}
+
+.theme-switcher svg {
+  z-index: 1;
+  transition: var(--theme-transition);
+}
+
+.icon-sun {
+  fill: var(--icon-sun);
+}
+
+.icon-moon {
+  fill: var(--icon-moon);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (min-width: 1024px) {
+  .container {
+    padding-top: 25px;
+  }
+}

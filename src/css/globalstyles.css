@@ -10,17 +10,43 @@ a {
   text-decoration: none;
 }
 
-@font-face {
-  font-family: 'Aleo', serif;
-  src: url('/src/assets/fonts/Aleo/Aleo-Regular.ttf') format("truetype");
-}
-
-@font-face {
-  font-family: 'Inter', sans-serif;
-  src: url('/src/assets/fonts/Inter/Inter.ttf') format("truetype");
-}
-
 :root {
-  --primary: #000;
-  --bg: #FFF;
+  --theme-transition: color .3s ease-in-out, 
+    background-color .3s ease-in-out,
+    fill .3s ease-in-out,
+    transform .3s ease-in-out;
+}
+
+:root[data-theme="light"] {
+  --page-bg: #FFFFFF;
+
+  --primary-text: #212226;
+  --secondary-text: #3C3D40;
+
+  --detail: #D7D7D9;
+
+  --switch-bg: #F5F5F6;
+  --switch-circle-bg: #FFD371;
+  --switch-circle-pos: 2px;
+  --icon-sun: #997F44;
+  --icon-moon: var(--detail);
+  /* 
+  --4: #666A73;
+  --5: #9FA3A6; 
+  */
+}
+
+:root[data-theme="dark"] {
+  --page-bg: #212226;
+
+  --primary-text: #FFFFFF;
+  --secondary-text: #d1d1d1;
+
+  --detail: #77757E;
+
+  --switch-bg: #2f3033;
+  --switch-circle-bg: #7190FF;
+  --switch-circle-pos: 37px;
+  --icon-sun: var(--detail);
+  --icon-moon: #DCE3FF;
 }

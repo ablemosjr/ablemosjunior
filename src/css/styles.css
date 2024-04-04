@@ -66,7 +66,7 @@ header {
 
 .links a:hover {
   color: var(--primary-text);
-  font-weight: 400;
+  font-weight: 500;
 }
 
 .theme-switcher {
@@ -106,8 +106,61 @@ header {
   fill: var(--icon-moon);
 }
 
+.intro {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  text-transform: uppercase;
+  justify-content: center;
+  height: 90%;
+  margin-top: 50px;
+}
+
+.intro__name {
+  font-size: 1.5625rem;
+  font-weight: 300;
+  color: var(--secondary-text);
+}
+
+.intro__career {
+  font-size: 2.2rem;
+  font-weight: 900;
+  color: var(--primary-text);
+  width: 480px;
+}
+
+.intro__career > span {
+  font-weight: 100;
+}
+
+.divider {
+  display: block;
+  width: 200px;
+  height: 1px;
+  background-color: var(--detail);
+}
+
+@media screen and (min-width: 768px) {
+  .intro__name {
+    font-size: 2rem;
+  }
+
+  .intro__career {
+    font-size: 3rem;
+  }
+}
+
 @media screen and (min-width: 1024px) {
   .container {
     padding-top: 25px;
+  }
+
+  .intro__name {
+    font-size: clamp(2.5rem, 2.0833rem + 0.651vi, 3.125rem);
+  }
+
+  .intro__career {
+    font-size: clamp(5rem, 4.1667rem + 1.3021vi, 6.25rem);
+    width: 100%;
   }
 }

@@ -30,6 +30,9 @@ a {
   --switch-circle-pos: 2px;
   --icon-sun: #997F44;
   --icon-moon: var(--detail);
+
+  --card-accent: #FFFFFF;
+  --card-neutral: #dfdfdf;
   /* 
   --4: #666A73;
   --5: #9FA3A6; 
@@ -49,4 +52,7 @@ a {
   --switch-circle-pos: 37px;
   --icon-sun: var(--detail);
   --icon-moon: #DCE3FF;
+
+  --card-accent: #FFFFFF;
+  --card-neutral: var(--secondary-text);
 }

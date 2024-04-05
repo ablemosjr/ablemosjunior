@@ -64,7 +64,8 @@ header {
   transition: .2s ease-in-out;
 }
 
-.links a:hover {
+.links a:hover,
+.links a:focus-within {
   color: var(--primary-text);
   font-weight: 500;
 }
@@ -140,6 +141,120 @@ header {
   background-color: var(--detail);
 }
 
+.about {
+  display: flex;
+  align-items: center;
+  height: 60dvh;
+  margin-bottom: 120px;
+}
+
+.about h3 {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 22px;
+  color: var(--secondary-text);
+  width: 60%;
+}
+
+.projects {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+.card {
+  height: 100vw;
+  background-size: cover;
+}
+
+.card__content {
+  height: 100%;
+  --padding: 1.5rem;
+  padding: var(--padding);
+  background: rgba(0, 0, 0, .65);
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+
+}
+
+.card__title {
+  color: var(--card-accent);
+  font-weight: 500;
+  position: relative;
+  width: max-content;
+}
+
+.card__title::after {
+  content: '';
+  position: absolute;
+  height: 1px;
+  left: calc(var(--padding) * -1);
+  bottom: -5px;
+  width: calc(100% + var(--padding));
+  background-color: var(--card-accent);
+}
+
+.card__description {
+  font-weight: 300;
+  margin-top: 1rem;
+  margin-bottom: 8px;
+}
+
+.card__description,
+.technologies span {
+  color: var(--card-neutral);
+}
+
+.technologies span {
+  font-size: 12px;
+  font-weight: 900;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+#card-one {
+  background-image: url('/src/assets/image/hbomax.png');
+}
+
+@media (hover) {
+  .card__content {
+    opacity: 0;
+    transition: all .3s ease;
+  }
+
+  .card__title::after {
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform .8s ease;
+  }
+
+  .card:hover .card__content, 
+  .card:focus-within .card__content {
+    opacity: 1;
+  }
+
+  .card:focus-within .card__content {
+    transition-duration: 0ms;
+  }
+
+  .card:focus-within .card__title::after,
+  .card:hover .card__title::after  {
+    transform: scaleX(1);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+    transition-delay: 0 !important;
+  }
+}
+
 @media screen and (min-width: 768px) {
   .intro__name {
     font-size: 2rem;
@@ -147,6 +262,18 @@ header {
 
   .intro__career {
     font-size: 3rem;
+  }
+
+  .about h3 {
+    font-size: clamp(1.25rem, 1rem + 0.3906vi, 1.625rem);
+  }
+
+  .projects {
+    grid-template-columns: repeat(auto-fit, minmax(50%, 1fr));
+  }
+
+  .card {
+    height: 50vw;
   }
 }
 
@@ -162,5 +289,13 @@ header {
   .intro__career {
     font-size: clamp(5rem, 4.1667rem + 1.3021vi, 6.25rem);
     width: 100%;
+  }
+
+  .projects {
+    grid-template-columns: repeat(auto-fit, minmax(33.33%, 1fr));
+  }
+
+  .card {
+    max-height: 450px;
   }
 }

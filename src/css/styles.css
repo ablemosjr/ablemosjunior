@@ -164,6 +164,39 @@ header {
 .card {
   height: 100vw;
   background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+.card > img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: relative;
+  z-index: 0;
+}
+
+.card__about {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: .5rem 1.5rem; 
+  background-color: var(--page-bg);
+  z-index: 0;
+}
+
+.card__wrapper {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+.card__about > span {
+  color: var(--primary-text);
+  font-weight: 500;
 }
 
 .card__content {
@@ -174,7 +207,6 @@ header {
   display: flex;
   flex-direction: column;
   justify-content: end;
-
 }
 
 .card__title {
@@ -210,10 +242,6 @@ header {
   font-weight: 900;
   letter-spacing: 1px;
   text-transform: uppercase;
-}
-
-#card-one {
-  background-image: url('/src/assets/image/hbomax.png');
 }
 
 @media (hover) {

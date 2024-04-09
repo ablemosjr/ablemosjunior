@@ -34,8 +34,8 @@
       </div>
 
       <nav class="links">
-        <a href="">Projetos</a>
-        <a href="">Contato</a>
+        <a href="#projects">Projetos</a>
+        <a href="#contact">Contato</a>
       </nav>
 
       <div class="theme-switcher" id="theme-switcher">
@@ -65,7 +65,7 @@
       </h3>
     </section>
 
-    <section class="projects max-w-1200">
+    <section class="projects max-w-1200" id="projects">
       <a 
         href="https://page-hbomax.netlify.app/" 
         class="card"
@@ -180,6 +180,60 @@
     </section>
   </main>
 
+  <section class="contact container max-w-1200" id="contact">
+    <div class="area__cta">
+      <h2 class="cta__title">Vamos<br class="break"> conversar!</h2>
+      <p class="cta__subtitle">
+        Me mande sua dúvida<br class="break"> ou dê um feedback <span>:&rpar;</span>
+      </p>
+    </div>
+
+    <div class="area__form">
+      <form action="">
+        <div class="form__input">
+          <label for="name-input">Nome: </label>
+          <input 
+            type="text" 
+            name="name-input"
+            id="name-input"
+            placeholder="John Doe *"
+          >
+          <span class="form__error" id="name-error"></span>
+        </div>
+        <div class="form__input">
+          <label for="email-input">Email: </label>
+          <input 
+            type="email" 
+            name="email-input"
+            id="email-input"
+            placeholder="johndoe@email.com *"
+          >
+          <span class="form__error" id="email-error"></span>
+        </div>
+
+        <input 
+          type="hidden"
+          name="subject"
+          id="subject"
+          value="| Enviado pelo portfólio"
+        >
+
+        <div class="form__input">
+          <label for="message-input">Mensagem: </label>
+          <textarea 
+            name="message-input" 
+            id="message-input"
+            placeholder="Olá Alessandro! Estou procurando por um desenvolvedor frontend e te encontrei! Poderia me ajudar com... *"
+          ></textarea>
+          <span class="form__error" id="message-error"></span>
+        </div>
+
+        <div class="button__container">
+          <button class="form__button">Enviar</button>
+        </div>
+      </form>
+    </div>
+  </section>
   
   <script src="src/js/main.js"></script>
 </body>

@@ -1,5 +1,9 @@
 @import url('globalstyles.css');
 
+* {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: 'Inter', sans-serif;
   overflow-x: hidden;
@@ -144,7 +148,7 @@ header {
 .about {
   display: flex;
   align-items: center;
-  height: 60dvh;
+  height: 360px;
   margin-bottom: 120px;
 }
 
@@ -244,6 +248,128 @@ header {
   text-transform: uppercase;
 }
 
+.contact {
+  display: flex;
+  flex-direction: column;
+  margin-top: 120px;
+  margin-bottom: 40px;
+}
+
+.cta__title {
+  font-size: 32px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  color: var(--primary-text);
+}
+
+.cta__subtitle {
+  font-size: 20px;
+  font-weight: 400;
+  color: var(--secondary-text);
+  margin-top: 20px;
+  margin-bottom: 36px;
+}
+
+.cta__subtitle span {
+  font-weight: 900;
+}
+
+.area__form {
+  margin-top: 20px;
+}
+
+.form__input {
+  display: flex;
+  flex-direction: column;
+  border-bottom: 1px solid var(--detail);
+  margin-bottom: 24px;
+}
+
+.form__input label {
+  font-size: 18px;
+  color: var(--primary-text);
+  font-weight: 400;
+}
+
+.form__input input, textarea {
+  font-family: 'Poppins', sans-serif;
+  font-size: 18px;
+  letter-spacing: 1px;
+  padding: 12px 0 5px 0;
+  outline: none;
+  border: none;
+  color: var(--secondary-text);
+  background-color: var(--page-bg);
+  caret-color: var(--primary-text);
+  margin-top: 8px;
+  margin-bottom: 5px;
+}
+
+.form__input textarea {
+  min-width: 100%;
+  max-width: 100%;
+  min-height: 150px;
+}
+
+::placeholder {
+  color: var(--placeholder);
+}
+
+.form__error {
+  font-size: 14px;
+  font-weight: var(--error-weight);
+  color: var(--error);
+  margin-bottom: 4px;
+  visibility: hidden;
+}
+
+.show-error {
+  visibility: visible !important;
+}
+
+.button__container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.form__button {
+  font-size: 16px;
+  font-weight: 900;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  padding: 20px;
+  width: 280px;
+  border: none;
+  outline: none;
+  margin-top: 20px;
+  background-color: var(--primary-text);
+  color: var(--page-bg);
+  cursor: pointer;
+  transition: .3s ease;
+}
+
+.form__button:hover,
+.form__button:active,
+.form__button:focus-within {
+  transform: scale(1.02);
+}
+
+.form__confirm {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.form__confirm span {
+  font-size: 24px;
+  font-weight: 900;
+  text-transform: uppercase;
+  color: var(--secondary-text);
+  letter-spacing: 1px;
+}
+
 @media (hover) {
   .card__content {
     opacity: 0;
@@ -280,6 +406,12 @@ header {
     transition-duration: 0.01ms !important;
     scroll-behavior: auto !important;
     transition-delay: 0 !important;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .break {
+    display: none;
   }
 }
 
@@ -325,5 +457,29 @@ header {
 
   .card {
     max-height: 450px;
+  }
+
+  .contact {
+    flex-direction: row;
+    justify-content: space-between;
+    min-height: min-content;
+  }
+
+  .cta__title {
+    font-size: clamp(2.5rem, 2.0833rem + 0.651vi, 3.125rem);
+  }
+
+  .cta__subtitle {
+    font-size: clamp(1.25rem, 1rem + 0.3906vi, 1.625rem);
+    margin-top: 36px;
+  }
+
+  .area__form {
+    width: 50%;
+    margin-top: 0;
+  }
+
+  .form__confirm span {
+    font-size: clamp(1.5rem, 1rem + 0.7813vi, 2.25rem);
   }
 }

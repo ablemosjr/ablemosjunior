@@ -33,10 +33,10 @@ a {
 
   --card-accent: #FFFFFF;
   --card-neutral: #dfdfdf;
-  /* 
-  --4: #666A73;
-  --5: #9FA3A6; 
-  */
+ 
+  --placeholder: #8a8b8d;
+  --error: #DB0000;
+  --error-weight: 500;
 }
 
 :root[data-theme="dark"] {
@@ -55,4 +55,8 @@ a {
 
   --card-accent: #FFFFFF;
   --card-neutral: var(--secondary-text);
+
+  --placeholder: var(--detail);
+  --error: #FF4537;
+  --error-weight: 200;
 }

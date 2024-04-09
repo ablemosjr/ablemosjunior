@@ -12,6 +12,20 @@ body {
   background-color: var(--page-bg);
 }
 
+::placeholder {
+  color: var(--placeholder);
+}
+
+::selection {
+  color: var(--page-bg);
+  background-color: var(--primary-text);
+}
+
+::-moz-selection {
+  color: var(--page-bg);
+  background-color: var(--primary-text);
+}
+
 .container {
   padding: 20px 20px;
 }
@@ -252,7 +266,7 @@ header {
   display: flex;
   flex-direction: column;
   margin-top: 120px;
-  margin-bottom: 40px;
+  margin-bottom: 80px;
 }
 
 .cta__title {
@@ -311,10 +325,6 @@ header {
   min-height: 150px;
 }
 
-::placeholder {
-  color: var(--placeholder);
-}
-
 .form__error {
   font-size: 14px;
   font-weight: var(--error-weight);
@@ -370,6 +380,56 @@ header {
   letter-spacing: 1px;
 }
 
+.footer__container {
+  padding: 10px 20px;
+}
+
+footer {
+  width: 100%;
+  background-color: var(--page-bg);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+  position: fixed;
+  bottom: 0;
+  z-index: 2;
+}
+
+.footer__by {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.footer__divider {
+  display: none;
+}
+
+.footer__by span {
+  font-size: 14px;
+  font-weight: 300;
+  color: var(--secondary-text);
+}
+
+.by__email {
+  user-select: text;
+  -webkit-user-select: text;
+}
+
+.footer__social {
+  display: flex;
+  gap: 16px;
+}
+
+.social__icon svg, 
+.social__icon svg path {
+  width: 22px;
+  height: 22px;
+  fill: var(--secondary-text);
+}
+
 @media (hover) {
   .card__content {
     opacity: 0;
@@ -395,6 +455,31 @@ header {
   .card:hover .card__title::after  {
     transform: scaleX(1);
   }
+
+  .social__icon {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    width: 100%;
+  }
+  
+  .social__icon::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: var(--primary-text);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform .8s ease;
+  }
+
+  .social__icon:hover::after,
+  .social__icon:focus-within::after {
+    transform: scaleX(1);
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -406,6 +491,19 @@ header {
     transition-duration: 0.01ms !important;
     scroll-behavior: auto !important;
     transition-delay: 0 !important;
+  }
+}
+
+@media screen and (min-width: 520px) {
+  .footer__by {
+    gap: 16px;
+  }
+
+  .footer__divider {
+    display: block;
+    width: 1px;
+    height: 10px;
+    background-color: var(--detail);
   }
 }
 
@@ -434,6 +532,10 @@ header {
 
   .card {
     height: 50vw;
+  }
+
+  .footer__container {
+    padding: 20px 20px;
   }
 }
 

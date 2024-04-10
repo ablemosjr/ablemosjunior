@@ -20,12 +20,12 @@ body {
 }
 
 ::selection {
-  color: var(--page-bg);
+  color: var(--selection);
   background-color: var(--primary);
 }
 
 ::-moz-selection {
-  color: var(--page-bg);
+  color: var(--selection);
   background-color: var(--primary);
 }
 
@@ -174,7 +174,6 @@ header {
   display: flex;
   align-items: center;
   height: 360px;
-  margin-bottom: 120px;
 }
 
 .about h3 {
@@ -187,6 +186,8 @@ header {
 .projects {
   display: grid;
   grid-template-columns: 1fr;
+  margin-top: 120px;
+  margin-bottom: 120px;
 }
 
 .card {
@@ -194,6 +195,7 @@ header {
   background-size: cover;
   background-position: center;
   position: relative;
+  outline: none;
 }
 
 .card > img {
@@ -275,7 +277,6 @@ header {
 .contact {
   display: flex;
   flex-direction: column;
-  margin-top: 120px;
   margin-bottom: 80px;
 }
 
@@ -333,6 +334,7 @@ header {
   min-width: 100%;
   max-width: 100%;
   min-height: 150px;
+  max-height: 350px;
 }
 
 .form__error {
@@ -464,6 +466,28 @@ footer {
   .card:focus-within .card__title::after,
   .card:hover .card__title::after  {
     transform: scaleX(1);
+  }
+
+  .form__button {
+    font-size: 16px;
+    font-weight: 900;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    padding: 20px;
+    width: 280px;
+    color: var(--primary);
+    background-color: transparent;
+    border: 2px solid var(--primary);
+    outline: none;
+    margin-top: 20px;
+    cursor: pointer;
+    transition: .3s ease;
+  }
+
+  .form__button:hover {
+    color: var(--page-bg);
+    background-color: var(--primary);
+    border: 2px solid var(--primary);
   }
 
   .social__icon {

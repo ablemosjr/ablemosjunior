@@ -73,10 +73,10 @@
       >
         <img src="/src/assets/image/hbomax.png" alt="HBOMax card">
 
-        <div class="card__about">
-          <span>Site</span>
-        </div>
         <div class="card__wrapper">
+          <div class="card__about">
+            <span>Site</span>
+          </div>
           <div class="card__content">
             <h2 class="card__title">HBO Max</h2>
             <p class="card__description letter-space line-height">
@@ -97,10 +97,10 @@
       >
         <img src="/src/assets/image/adviceGenerator.png" alt="Advice Generator card">
 
-        <div class="card__about">
-          <span>Componente</span>
-        </div>
         <div class="card__wrapper">
+          <div class="card__about">
+            <span>Componente</span>
+          </div>
           <div class="card__content">
             <h2 class="card__title">Gerador de conselhos</h2>
             <p class="card__description letter-space line-height">
@@ -122,10 +122,10 @@
       >
         <img src="/src/assets/image/interactiveRatingGenerator.png" alt="Interactive Rating card">
 
-        <div class="card__about">
-          <span>Componente</span>
-        </div>
         <div class="card__wrapper">
+          <div class="card__about">
+            <span>Componente</span>
+          </div>
           <div class="card__content">
             <h2 class="card__title">Classificação interativa</h2>
             <p class="card__description letter-space line-height">
@@ -147,10 +147,10 @@
       >
         <img src="/src/assets/image/hooBank.png" alt="HooBank card">
 
-        <div class="card__about">
-          <span>Site</span>
-        </div>
         <div class="card__wrapper">
+          <div class="card__about">
+            <span>Site</span>
+          </div>
           <div class="card__content">
             <h2 class="card__title">HooBank</h2>
             <p class="card__description letter-space line-height">
@@ -189,7 +189,7 @@
     </div>
 
     <div class="area__form user-select-none">
-      <form action="">
+      <form action="submit" id="form-contact">
         <div class="form__input">
           <label for="name-input">Nome: </label>
           <input 
@@ -203,7 +203,7 @@
         <div class="form__input">
           <label for="email-input">Email: </label>
           <input 
-            type="email" 
+            type="text" 
             name="email-input"
             id="email-input"
             placeholder="johndoe@email.com *"
@@ -229,7 +229,7 @@
         </div>
 
         <div class="button__container">
-          <button class="form__button">Enviar</button>
+          <button type="submit" class="form__button">Enviar</button>
         </div>
       </form>
     </div>
@@ -257,5 +257,6 @@
   </footer>
 
   <script src="src/js/main.js"></script>
+  <script src="src/js/form.js"></script>
 </body>
 </html>

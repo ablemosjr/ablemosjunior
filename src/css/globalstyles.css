@@ -28,6 +28,7 @@ a {
   --secondary: #3C3D40;
 
   --detail: #D7D7D9;
+  --selection: var(--page-bg);
 
   --switch-bg: #F5F5F6;
   --switch-circle-bg: #FFD371;
@@ -45,11 +46,12 @@ a {
 
 :root[data-theme="dark"] {
   --page-bg: #212226;
-
+  
   --primary: #FFFFFF;
-  --secondary: #dfdfdf;
+  --secondary: #cfcfcf;
 
   --detail: #77757E;
+  --selection: #000;
 
   --switch-bg: #2f3033;
   --switch-circle-bg: #7190FF;

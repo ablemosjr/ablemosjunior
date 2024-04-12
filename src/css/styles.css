@@ -101,7 +101,7 @@ header {
 
 .theme-switcher {
   background-color: var(--switch-bg);
-  border-radius: 1px;
+  border-radius: 2px;
   display: flex;
   align-items: center;
   gap: 1rem;
@@ -116,7 +116,7 @@ header {
   width: 1.56rem;
   height: 1.56rem;
   background-color: var(--switch-circle-bg);
-  border-radius: 1px;
+  border-radius: 2px;
   z-index: 0;
   left: 0;
   transform: translateX(var(--switch-circle-pos));
@@ -139,11 +139,10 @@ header {
 .intro {
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 1.25rem;
   text-transform: uppercase;
   justify-content: center;
   height: 90%;
-  margin-top: 50px;
 }
 
 .intro__name {
@@ -177,7 +176,7 @@ header {
 }
 
 .about h3 {
-  font-size: 16px;
+  font-size: 1rem;
   font-weight: 400;
   color: var(--secondary);
   width: 60%;
@@ -186,8 +185,8 @@ header {
 .projects {
   display: grid;
   grid-template-columns: 1fr;
-  margin-top: 120px;
-  margin-bottom: 120px;
+  margin-top: 7rem;
+  margin-bottom: 7rem;
 }
 
 .card {
@@ -196,6 +195,7 @@ header {
   background-position: center;
   position: relative;
   outline: none;
+  --padding: 1.5rem;
 }
 
 .card > img {
@@ -208,8 +208,8 @@ header {
 
 .card__about {
   position: absolute;
-  top: 0;
-  left: 0;
+  top: var(--padding);
+  left: var(--padding);
   padding: .5rem 1.5rem; 
   background-color: var(--page-bg);
   z-index: 0;
@@ -231,7 +231,6 @@ header {
 
 .card__content {
   height: 100%;
-  --padding: 1.5rem;
   padding: var(--padding);
   background: rgba(0, 0, 0, .75);
   display: flex;
@@ -268,31 +267,31 @@ header {
 }
 
 .technologies span {
-  font-size: 12px;
+  font-size: .75rem;
   font-weight: 900;
-  letter-spacing: 1px;
+  letter-spacing: var(--letter-space);
   text-transform: uppercase;
 }
 
 .contact {
   display: flex;
   flex-direction: column;
-  margin-bottom: 80px;
+  margin-bottom: 5rem;
 }
 
 .cta__title {
-  font-size: 32px;
+  font-size: 2rem;
   font-weight: 700;
   letter-spacing: 1px;
   color: var(--primary);
 }
 
 .cta__subtitle {
-  font-size: 20px;
+  font-size: 1.25rem;
   font-weight: 400;
   color: var(--secondary);
-  margin-top: 20px;
-  margin-bottom: 36px;
+  margin-top: 1.25rem;
+  margin-bottom: 2.25rem;
 }
 
 .cta__subtitle span {
@@ -300,25 +299,25 @@ header {
 }
 
 .area__form {
-  margin-top: 20px;
+  margin-top: 1.25rem;
 }
 
 .form__input {
   display: flex;
   flex-direction: column;
   border-bottom: 1px solid var(--detail);
-  margin-bottom: 24px;
+  margin-bottom: 1.5rem;
 }
 
 .form__input label {
-  font-size: 18px;
+  font-size: 1.125rem;
   color: var(--primary);
   font-weight: 400;
 }
 
 .form__input input, textarea {
   font-family: 'Poppins', sans-serif;
-  font-size: 18px;
+  font-size: 1.125rem;
   letter-spacing: 1px;
   padding: 12px 0 5px 0;
   outline: none;
@@ -326,8 +325,8 @@ header {
   color: var(--secondary);
   background-color: var(--page-bg);
   caret-color: var(--primary);
-  margin-top: 8px;
-  margin-bottom: 5px;
+  margin-top: .5rem;
+  margin-bottom: .3125rem;
 }
 
 .form__input textarea {
@@ -338,10 +337,10 @@ header {
 }
 
 .form__error {
-  font-size: 14px;
+  font-size: .875rem;
   font-weight: var(--error-weight);
   color: var(--error);
-  margin-bottom: 4px;
+  margin-bottom: .25rem;
   visibility: hidden;
 }
 
@@ -356,7 +355,7 @@ header {
 }
 
 .form__button {
-  font-size: 16px;
+  font-size: 1rem;
   font-weight: 900;
   letter-spacing: 2px;
   text-transform: uppercase;
@@ -364,7 +363,7 @@ header {
   width: 280px;
   border: none;
   outline: none;
-  margin-top: 20px;
+  margin-top: 1.25rem;
   background-color: var(--primary);
   color: var(--page-bg);
   cursor: pointer;
@@ -385,11 +384,11 @@ header {
 }
 
 .form__confirm span {
-  font-size: 24px;
+  font-size: 1.5rem;
   font-weight: 900;
   text-transform: uppercase;
   color: var(--secondary);
-  letter-spacing: 1px;
+  letter-spacing: var(--letter-space);
 }
 
 .footer__container {
@@ -402,7 +401,7 @@ footer {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 15px;
+  gap: .9375rem;
   position: fixed;
   bottom: 0;
   z-index: 2;
@@ -412,7 +411,7 @@ footer {
   display: flex;
   align-items: center;
   flex-wrap: wrap;
-  gap: 8px;
+  gap: .5rem;
 }
 
 .footer__divider {
@@ -420,7 +419,7 @@ footer {
 }
 
 .footer__by span {
-  font-size: 14px;
+  font-size: .875rem;
   font-weight: 300;
   color: var(--secondary);
 }
@@ -432,7 +431,7 @@ footer {
 
 .footer__social {
   display: flex;
-  gap: 16px;
+  gap: 1rem;
 }
 
 .social__icon svg, 
@@ -469,17 +468,17 @@ footer {
   }
 
   .form__button {
-    font-size: 16px;
+    font-size: 1rem;
     font-weight: 900;
     letter-spacing: 2px;
     text-transform: uppercase;
-    padding: 20px;
+    padding: 1.25rem;
     width: 280px;
     color: var(--primary);
     background-color: transparent;
     border: 2px solid var(--primary);
     outline: none;
-    margin-top: 20px;
+    margin-top: 1.25rem;
     cursor: pointer;
     transition: .3s ease;
   }
@@ -530,13 +529,13 @@ footer {
 
 @media screen and (min-width: 520px) {
   .footer__by {
-    gap: 16px;
+    gap: 1rem;
   }
 
   .footer__divider {
     display: block;
     width: 1px;
-    height: 10px;
+    height: 20px;
     background-color: var(--detail);
   }
 }
@@ -557,7 +556,7 @@ footer {
   }
 
   .about h3 {
-    font-size: clamp(1.25rem, 1rem + 0.3906vi, 1.625rem);
+    font-size: 1.25rem;
   }
 
   .projects {
@@ -575,24 +574,24 @@ footer {
 
 @media screen and (min-width: 1024px) {
   .container {
-    padding-top: 25px;
+    padding-top: 1.5625rem;
   }
 
   .intro__name {
-    font-size: clamp(2.5rem, 2.0833rem + 0.651vi, 3.125rem);
+    font-size: 2rem;
   }
 
   .intro__career {
-    font-size: clamp(5rem, 4.1667rem + 1.3021vi, 6.25rem);
+    font-size: 3.75rem;
     width: 100%;
   }
 
   .projects {
-    grid-template-columns: repeat(auto-fit, minmax(33.33%, 1fr));
+    grid-template-columns: repeat(auto-fit, 33.33%);
   }
 
   .card {
-    max-height: 450px;
+    max-height: 400px;
   }
 
   .contact {
@@ -607,7 +606,7 @@ footer {
 
   .cta__subtitle {
     font-size: clamp(1.25rem, 1rem + 0.3906vi, 1.625rem);
-    margin-top: 36px;
+    margin-top: 2.25rem;
   }
 
   .area__form {

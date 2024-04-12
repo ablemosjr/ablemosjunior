@@ -16,9 +16,9 @@ a {
     fill .3s ease-in-out,
     transform .3s ease-in-out;
   
-  --p-5: 20px;
-  --letter-space: 1px;
-  --line-height: 26px;
+  --p-5: 1.25rem;
+  --letter-space: .04em;
+  --line-height: 1.75rem;
 }
 
 :root[data-theme="light"] {

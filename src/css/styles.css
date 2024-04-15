@@ -29,6 +29,19 @@ body {
   background-color: var(--primary);
 }
 
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--secondary);
+  height: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: var(--primary);
+}
+
 .container {
   padding: var(--p-5);
 }

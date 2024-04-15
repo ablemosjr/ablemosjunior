@@ -155,7 +155,7 @@ header {
   font-size: 2.2rem;
   font-weight: 900;
   color: var(--primary);
-  width: 480px;
+  width: 80%;
 }
 
 .intro__career > span {
@@ -524,6 +524,20 @@ footer {
     transition-duration: 0.01ms !important;
     scroll-behavior: auto !important;
     transition-delay: 0 !important;
+  }
+}
+
+@media screen and (width: 320px) {
+  .intro__name {
+    font-size: 1.2rem;
+  }
+
+  .intro__career {
+    font-size: 1.5rem;
+  }
+
+  .card {
+    height: 400px;
   }
 }
 
